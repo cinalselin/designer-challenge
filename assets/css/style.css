@@ -1,3 +1,266 @@
-img {
-    width:100px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --designerRed: #ff3571;
+    --designerGrey: #dddddd;
+    --designerBlue: #3C30FF;
+    --designerBlack: #0b0c17;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: var(--designerBlack);
+}
+
+h3 {
+    font-size: 3.5rem;
+    font-weight:700;
+}
+
+p {
+    font-weight: 300;
+}
+
+
+/* ------ HEADER LOGO ------ */
+
+header {
+    background: url(../img/ilustracion1.png) no-repeat;
+    background-size: 50%;
+    background-position: top right;
+    min-height:100vh;
+    position:relative;
+}
+
+.logo {
+    display:flex;
+}
+
+.logo h1 {
+    font-weight: 700;
+    margin: 2rem 80px;
+    font-size:1.25rem;
+
+    line-height: 0.75;
+}
+
+.logo span {
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+.logo img {
+    width:40px;
+    position: fixed;
+    margin: 1.5rem;
+}
+
+.designerFloat {
+    position:absolute;
+    top: 0;
+}
+
+.designerFloat img {
+    width:60%;
+    transform: translateX(80%);
+}
+
+.heroSection {
+    margin-top: 15%;
+    margin-left: 5%; 
+}
+
+.heroSection h2 {
+    font-size: 3rem;
+    width:30%;
+    margin-bottom: 15px;
+
+}
+
+.heroSection p {
+    width: 30%;
+    line-height: 1;
+}
+
+.heroSection + p {
+    color: var(--designerRed);
+    font-size: 0.75rem;
+    font-weight:700;
+    margin-left: 5%; 
+    margin-top: 30vh;
+}
+
+
+/* ------ MAIN SECTION 1 ------ */
+
+main {
+    padding:5rem;
+}
+
+section:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:first-of-type > img {
+    width:100vw;
+    margin-bottom: 10%;
+}
+
+
+/* ------ SECTION 1 ARTICLE 1 ------ */
+
+.idea {
+    display: flex;
+    gap: 20%;
+    min-height:50vh;
+}
+
+.idea h3 {
+    width: 25%;
+}
+
+.idea h3 img {
+    width:50px;
+}
+
+.idea p {
+    width: 40%;
+    line-height: 2.25;
+}
+
+.container {
+    margin:15% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20%;
+}
+
+.why {
+    display:flex;
+    gap: 20px;
+}
+
+section:first-of-type article:last-of-type h3 {
+    width:50%
+}
+
+section:first-of-type article:last-of-type img {
+    width:25px;
+}
+
+section:first-of-type article:last-of-type p {
+    line-height:2;
+}
+
+/* -------- SECTION 2 ------- */
+
+.introChallenge {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 20%;
+}
+
+.introChallenge h3 {
+    margin-bottom: 5%;
+}
+
+section:last-of-type img {
+    width:40%;
+}
+
+section:last-of-type article div img {
+    width:25px;
+}
+
+section:last-of-type article h3 {
+    color: var(--designerGrey);
+    margin-bottom: 50px;
+}
+
+section:last-of-type article h4 {
+    margin: 10px 0;
+}
+
+section:last-of-type article p {
+    line-height: 2;
+}
+
+section:last-of-type article {
+    margin-bottom: 5%;
+}
+
+.stepOne, .stepTwo, .stepThree, .stepFour {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+/* ------ FOOTER ------ */
+
+footer {
+    padding-left:5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer div p {
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 5% 0;
+}
+
+input {
+    border: none;
+    text-align: center;
+}
+
+
+input[type="email"] {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    padding: 10px 100px;
+    border-radius: 5px;
+} 
+
+input[type="submit"] {
+    background-color: var(--designerRed);
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);    
+}
+
+footer div:last-of-type {
+    width: 100%;
+    text-align: left;
+}
+
+footer div:last-of-type img {
+    width: 25px;
 }
