@@ -68,12 +68,15 @@ header {
 
 .designerFloat img {
     width:60%;
-    transform: translateX(80%);
+    position: relative;
+    left:35%;
+    animation: floatDesigner 1.5s infinite ease-in-out;
 }
 
 .heroSection {
     margin-top: 15%;
-    margin-left: 5%; 
+    margin-left: 5rem; 
+    
 }
 
 .heroSection h2 {
@@ -92,8 +95,12 @@ header {
     color: var(--designerRed);
     font-size: 0.75rem;
     font-weight:700;
-    margin-left: 5%; 
+    margin-left: 5rem; 
     margin-top: 30vh;
+}
+
+.heroSection img {
+    width:25px;
 }
 
 
@@ -121,6 +128,7 @@ section:first-of-type > img {
     display: flex;
     gap: 20%;
     min-height:50vh;
+    margin-bottom: 10%;
 }
 
 .idea h3 {
@@ -253,7 +261,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);    
+    background-color: #ff3571;
+    background-image: linear-gradient(90deg, #ff3571 0%, #80a7d0 100%);
 }
 
 footer div:last-of-type {
@@ -264,3 +273,163 @@ footer div:last-of-type {
 footer div:last-of-type img {
     width: 25px;
 }
+
+
+
+@keyframes floatDesigner {
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+
+/* -------- RESPONSIVE PART ------- */
+
+
+@media (max-width: 1024px) {
+
+    h3 {
+        font-size: 2.5rem;
+}
+
+    .heroSection h2,  .heroSection p {
+        width:50%;
+}
+
+    main section:first-of-type article:nth-of-type(2) h3 {
+        width: 100%;
+}
+
+    .idea h3, .idea p {
+        width: 60%;
+}
+
+    .idea {
+        gap: 5%;
+}
+
+}
+
+  
+  @media (max-width: 768px) {
+
+    .heroSection {
+        margin-top: 30vh;
+    }
+
+
+    h3 {
+        font-size: 2rem;
+}
+
+    .heroSection h2 {
+        font-size: 2rem;
+        width:60%;
+}
+
+    .heroSection p {
+        width:60%;
+        line-height: 2;
+}
+
+    .idea {
+        flex-direction: column;
+}
+
+    .idea h3 {
+        margin-bottom: 5%;
+}
+
+    .idea h3, .idea p {
+        width: 100%;
+}
+
+    .introChallenge {
+        margin: 10% 10%;
+}
+    footer div:last-of-type p {
+        font-size: 0.75rem;
+}
+    footer div:last-of-type img {
+        width: 15px;
+}
+
+} 
+
+
+@media (max-width: 576px) {
+   
+    header {
+        background: url(../img/ilustracion1.png) no-repeat;
+        background-size: 110%;
+        background-position: top right;
+        min-height:100vh;
+    }
+
+    .logo {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .heroSection {
+        margin-top: 35vh;
+    }
+
+    .heroSection h2, .heroSection p {
+        width: 100%;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 10%;
+        padding-bottom: 70%;
+        /* min-height:150vh; */
+    }
+
+    .why {
+        width:80%;
+    }
+
+    section:first-of-type article:last-of-type img {
+        width:50px;
+    }
+
+    .stepOne, .stepTwo, .stepThree, .stepFour {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20%;
+    }
+
+    .stepOne div p, .stepTwo div p, .stepThree div p, .stepFour div p {
+       z-index: 3;
+       position: relative;
+    }
+
+    section:last-of-type  {
+    position: relative;
+}
+
+    section:last-of-type img:not(article div img:last-of-type) {
+        width:60%;
+        position: absolute;
+        opacity: 0.25;
+        z-index: 1;
+    }
+
+    footer {
+        padding:0 1rem;
+       
+    }
+
+    footer div:last-of-type p {
+        text-align: center;
+    }
+    
+}
+
